@@ -1,6 +1,16 @@
 # Math formulas
 ## General information
-Проект представляет набор функций, которые возвращают площади и периметры геометрических фигур по введённым данным 
+Данный проект содержит набор файлов различных геометрических фигур, в которых вычисляется площадь и периметр каждой из них, а именно:
+- circle.py (круг)
+- triangle.py (треугольник)
+- square.py (квадрат)
+- rectangle.py (прямоугольник)
+Также данный проект содержит тесты для каждой из геометрических фигур. Тесты проверяют корректность вычисления площадей и периметров фигур
+- test_ircle.py (тесты для круга)
+- test_triangle.py (тесты для треугольника)
+- test_square.py (тесты для квадрата)
+- test_rectangle.py (тесты для прямоугольника)
+Покрытие (coverage) каждого теста не менее 90% 
 ## Area
 - Circle: S = πR²
 ### Формула возвращает площадь круга 
@@ -8,7 +18,7 @@
 def area(r):
     return math.pi * r * r
 '''
-- **example**: if r = 3, then programm output 28.274333882308138
+- **пример**: если r = 3, программа выведет 28.274333882308138
 
 - Rectangle: S = ab
 ### Формула возвращает площадь прямоугольника
@@ -16,15 +26,23 @@ def area(r):
 def area(a, b):
     return a * b
 '''
-- **example**: if a = 4, b = 5, then programm output 20
+- **пример**: если a = 4, b = 5, программа выведет 20
 
 - Square: S = a²
-### Формула фозвращает площадь квадрата
+### Формула возвращает площадь квадрата
 '''
 def area(a):
     return a * a
 '''
--**example**: if a = 5, then programm output 25
+-**пример**: если a = 5, программа выведет 25
+
+- Triangle: S = 0.5 * a * h
+### Формула возвращает площадь треугольника 
+'''
+def area(a, h):
+    return 0.5 * a * h
+'''
+- **пример**: если a = 3,h = 4 программа выведет 6
 
 ## Perimeter
 - Circle: P = 2πR
@@ -33,7 +51,7 @@ def area(a):
 def perimeter(r):
     return 2 * math.pi * r
 '''
--**example**: if r = 2, then programm output 28.274333882308138
+-**пример**: если r = 2, программа выведет 28.274333882308138
 
 ### Формула возвращает периметр прямоугольника
 - Rectangle: P = 2a + 2b
@@ -41,7 +59,7 @@ def perimeter(r):
 def perimeter(a, b):
     return 2a + 2b
 '''
--**example**: if a = 3, b = 4, than programm output 14
+-**пример**: если a = 3, b = 4, программа выведет 14
 
 ### Формула возвращает периметр квадрата 
 - Square: P = 4a    
@@ -49,7 +67,15 @@ def perimeter(a, b):
 def perimerter(a):
     return 4*a
 '''
--**example**: if a = 3, then programm output 12
+-**пример**: если a = 3, программа выведет 12
+
+- Triangle: P = a + b + c
+### Формула возвращает периметр круга 
+'''
+def perimeter(a, b, c):
+    return a + b + c
+'''
+-**пример**: если a = 3, b = 4, c = 5, программа выведет 12
 
 # History
 **1** commit(8ba9aeb3cea847b63a91ac378a2a6db758682460)
@@ -58,3 +84,7 @@ def perimerter(a):
 **2** commit(d078c8d9ee6155f3cb0e577d28d337b791de28e2)
 *date* -Thu Mar 4 14:55:29 2021
 *new* -Docs added
+**3** commit (9c89ffcb213ab3e397c2a96821010cc56dbdadbf)
+*date* Mon Oct 6 00:31:17 2025
+*new* -added documentation in READme.md
+**4** commit
