@@ -6,7 +6,7 @@
 - square.py (квадрат)
 - rectangle.py (прямоугольник)
 Также данный проект содержит тесты для каждой из геометрических фигур. Тесты проверяют корректность вычисления площадей и периметров фигур
-- test_ircle.py (тесты для круга)
+- test_circle.py (тесты для круга)
 - test_triangle.py (тесты для треугольника)
 - test_square.py (тесты для квадрата)
 - test_rectangle.py (тесты для прямоугольника)
@@ -87,4 +87,6 @@ def perimeter(a, b, c):
 **3** commit (9c89ffcb213ab3e397c2a96821010cc56dbdadbf)
 *date* Mon Oct 6 00:31:17 2025
 *new* -added documentation in READme.md
-**4** commit
+**4** commit (c71ccc19d40a896c75f91d47701d85dadda542a3)
+*date* Sun Nov 2 18:46:22 2025
+*new* -added triangle.py, rectangle.py and tests for geometric figures 
