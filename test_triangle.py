@@ -59,15 +59,15 @@ class TriangleTestCases(unittest.TestCase):
             area([12, 24, 36], [23, 45, 56])
     '''Тест для функции area() о выводе сообщения об ошибке для отрицательной стороны и высоты'''
     def test_area_negative_sides_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             area(-4, -8)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест площади треугольника с кортежами в качестве сторон ввода данных'''
     def test_area_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             area((23, 56, 97), (34, 56, 43))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     # Тесты для функции perimeter
     '''Тест периметра треугольника с целочисленными положительными сторонами'''
@@ -124,15 +124,15 @@ class TriangleTestCases(unittest.TestCase):
             perimeter([12, 24, 36], [23, 45, 56], [2, 3, 4])
     '''Тест для функции perimeter() о выводе сообщения об ошибке для отрицательных сторон'''
     def test_perimeter_negative_sides_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             perimeter(-4, -8, -52)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест периметра треугольника с кортежами в качестве сторон ввода данных'''
     def test_perimeter_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             perimeter((23, 56, 97), (34, 56, 43), (99, 46, 33))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
 
 if __name__ == '__main__':

@@ -55,15 +55,15 @@ class SquareTestCases(unittest.TestCase):
             area([23, 52, 56])
     '''Тест для функции area() о выводе сообщения об ошибке для отрицательной стороны'''
     def test_area_negative_side_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             area(-30)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест площади квадрата с кортежем в качестве ввода данных'''
     def test_area_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             area((49, 12, 95))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     # Тесты для функции perimeter
     '''Тест периметра квадрата с целочисленной положительной стороной'''
@@ -112,15 +112,15 @@ class SquareTestCases(unittest.TestCase):
             perimeter([24, 56, 10])
     '''Тест для функции perimeter() о выводе сообщения об ошибке для отрицательной стороны'''
     def test_perimeter_negative_side_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             perimeter(-3)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест периметра квадрата с кортежем в качестве ввода данных'''
     def test_perimeter_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             perimeter((10, 20, 30))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
 
 if __name__ == '__main__':

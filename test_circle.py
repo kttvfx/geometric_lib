@@ -59,15 +59,15 @@ class CircleTestCases(unittest.TestCase):
             area([12, 24, 36])
     '''Тест для функции area() о выводе сообщения об ошибке для отрицательного радиуса'''
     def test_area_negative_radius_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             area(-4)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест площади круга с кортежем в качестве ввода данных'''
     def test_area_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             area((23, 56, 97))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     # Тесты для функции perimeter
     '''Тест периметра круга с целочисленным положительным радиусом'''
@@ -120,15 +120,15 @@ class CircleTestCases(unittest.TestCase):
             perimeter([32, 54, 52])
     '''Тест для функции perimeter() о выводе сообщения об ошибке для отрицательного радиуса'''
     def test_perimeter_negative_radius_message(self):
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(ValueError) as cmd:
             perimeter(-4)
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
     '''Тест периметра круга с кортежем в качестве ввода данных'''
     def test_perimeter_input_tuple(self):
-        with self.assertRaises(TypeError) as cm:
+        with self.assertRaises(TypeError) as cmd:
             perimeter((23, 56, 97))
-        error_message = str(cm.exception)
+        error_message = str(cmd.exception)
         self.assertIn("Ошибка", error_message)
 
 if __name__ == '__main__':
