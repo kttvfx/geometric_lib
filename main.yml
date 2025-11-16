@@ -1,0 +1,16 @@
+name: Lab №5, CI/CD, Run Unit Tests on python
+on: [push]
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13.5'
+    - name: run python unit tests
+      run: python3 -m pytest
