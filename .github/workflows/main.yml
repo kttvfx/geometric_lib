@@ -7,10 +7,13 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.13.5'
+        
     - name: Run Python UnitTests
-      run: 
-        python3 -m unittest
+      run: python3 -m unittest
